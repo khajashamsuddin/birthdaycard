@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Happy Birthday Saniaa! 🎀 A Little World Made Just For You</title>
+  <meta name="description" content="A magical, aesthetic, story-driven birthday surprise website made with love for Saniaa." />
+
+  <!-- Google Fonts: Premium Calligraphy, Script, Serif & Modern Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Dancing+Script:wght@500;600;700&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Aesthetic Paper Texture Background -->
+  <div class="paper-pattern"></div>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Top Floating Audio / Music Box Controller -->
+  <div class="audio-controller" id="audio-toggle" title="Toggle gentle music box melody">
+    <span class="audio-icon" id="audio-icon">🎶</span>
+    <span class="audio-text" id="audio-text">Play Melody</span>
+  </div>
+
+  <!-- Floating Doodles & Stickers -->
+  <div class="floating-decorations">
+    <span class="deco-item" style="top: 8%; left: 7%; font-size: 1.8rem;">🎀</span>
+    <span class="deco-item" style="top: 15%; right: 9%; font-size: 2rem; animation-delay: 1.2s;">✨</span>
+    <span class="deco-item" style="top: 45%; left: 4%; font-size: 1.6rem; animation-delay: 2.5s;">🌸</span>
+    <span class="deco-item" style="top: 60%; right: 6%; font-size: 2.2rem; animation-delay: 0.8s;">🍓</span>
+    <span class="deco-item" style="top: 80%; left: 8%; font-size: 1.8rem; animation-delay: 3s;">🧸</span>
+    <span class="deco-item" style="top: 85%; right: 10%; font-size: 2rem; animation-delay: 1.8s;">💫</span>
+  </div>
+
+  <!-- Main Application Chapters -->
+  <main class="app-container">
+
+    <!-- =============================================================
+         CHAPTER 1: THE MAGIC ENVELOPE (SURPRISE FOR SANIAA)
+         ============================================================= -->
+    <section class="chapter-section active" id="chapter-0">
+      <div class="badge-tag">💌 Handcrafted with Love</div>
+      <h1 class="title-script" style="font-size: clamp(2.4rem, 6vw, 4rem);">
+        For Dearest Saniaa 🎀
+      </h1>
+      <p class="subtext">
+        Someone deserves a whole lot of extra warmth, smiles, and magic today... and I think you know who! ♡
+      </p>
+
+      <!-- 3D Interactive Envelope -->
+      <div class="envelope-wrapper" id="envelope-wrapper" title="Tap to open the surprise!">
+        <div class="envelope-box">
+          <div class="envelope-flap"></div>
+          <div class="envelope-pocket"></div>
+          <div class="wax-seal">S</div>
+          <div class="envelope-letter">
+            <span style="font-size: 1.6rem;">🌸</span>
+            <div class="letter-to">To Saniaa</div>
+            <div class="letter-sub">A special little journey awaits you inside... ✨</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="open-surprise-btn">
+        <span>Open Your Surprise</span>
+        <span>🎀</span>
+      </button>
+    </section>
+
+    <!-- =============================================================
+         CHAPTER 2: BIRTHDAY CELEBRATION & CAKE
+         ============================================================= -->
+    <section class="chapter-section" id="chapter-1">
+      <div class="badge-tag">🎂 Special Day Alert</div>
+      <h2 class="heading-script" style="font-size: clamp(2rem, 5.5vw, 3.4rem);">
+        Happy Birthday, Saniaa! 💖
+      </h2>
+      <p class="subtext">
+        Today the universe celebrates your presence, your beautiful heart, and your contagious smile!
+      </p>
+
+      <!-- Interactive Birthday Cake with Candle -->
+      <div class="cake-stage" id="cake-stage" title="Tap the candle to blow it out!">
+        <svg class="cake-svg" viewBox="0 0 240 220">
+          <!-- Plate -->
+          <ellipse cx="120" cy="205" rx="90" ry="12" fill="#FFE4A0" opacity="0.6"/>
+          <!-- Bottom Cake Layer -->
+          <rect x="35" y="145" width="170" height="60" rx="18" fill="#FFB5C8"/>
+          <rect x="35" y="142" width="170" height="14" rx="7" fill="#FF8FAB"/>
+          <!-- Frosting Cream Drips -->
+          <path d="M35 152 Q50 170 65 152 Q80 172 95 152 Q110 170 125 152 Q140 172 155 152 Q170 170 185 152 Q200 172 205 152" fill="#FFF" opacity="0.85"/>
+          
+          <!-- Top Cake Layer -->
+          <rect x="60" y="85" width="120" height="60" rx="16" fill="#C9B8FF"/>
+          <rect x="60" y="83" width="120" height="14" rx="7" fill="#A892FF"/>
+          <!-- Top Frosting Drips -->
+          <path d="M60 93 Q75 110 90 93 Q105 110 120 93 Q135 110 150 93 Q165 110 180 93" fill="#FFF" opacity="0.9"/>
+          
+          <!-- Candle Body -->
+          <rect x="114" y="48" width="12" height="38" rx="6" fill="#FFE4A0" stroke="#E5A93B" stroke-width="1.5"/>
+          
+          <!-- Candle Flame -->
+          <g id="candle-flame" class="candle-flame">
+            <ellipse cx="120" cy="38" rx="7" ry="12" fill="#FFD166" opacity="0.95"/>
+            <ellipse cx="120" cy="41" rx="4" ry="7" fill="#FF8FAB"/>
+          </g>
+          
+          <!-- Candle Smoke (Shown when blown) -->
+          <g id="candle-smoke" class="candle-smoke">
+            <path d="M120 44 Q126 28 120 18 Q114 8 120 0" stroke="#BBB" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+
+        <div class="cake-instructions">
+          <span>🕯️ Tap candle to blow & make a wish, Mohtarma!</span>
+        </div>
+      </div>
+
+      <!-- Secret Unfolded Wish -->
+      <div class="wish-unfolded" id="wish-unfolded">
+        <span style="font-size: 2rem;">✨</span>
+        <h3 class="heading-script" style="font-size: 1.6rem; color: #E75480; margin: 6px 0;">
+          Your Wish Is Sent to the Stars!
+        </h3>
+        <p style="font-size: 0.95rem; color: #4A3E4E; line-height: 1.6;">
+          May Allah accept every single silent dua in your heart, grant you immense peace, and fill your days ahead with boundless laughter, Sanu! 🤍
+        </p>
+      </div>
+
+      <div style="margin-top: 24px;">
+        <button class="btn-primary" id="cake-next-btn">
+          <span>Explore Your Birthday Journey</span>
+          <span>🌷</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- =============================================================
+         CHAPTER 3: 8 HAPPY THINGS (FLIP CARDS)
+         ============================================================= -->
+    <section class="chapter-section" id="chapter-2">
+      <div class="badge-tag">🌷 Tap to Flip Cards</div>
+      <h2 class="heading-script" style="font-size: clamp(1.9rem, 5vw, 3rem);">
+        Little Reminders 💖
+      </h2>
+      <p class="subtext">
+        Eight wholesome, heartwarming notes crafted for my favorite person.
+      </p>
+
+      <!-- Flip Cards Container -->
+      <div class="cards-grid" id="cards-grid"></div>
+
+      <button class="btn-primary" id="flip-next-btn">
+        <span>Read 24 Birthday Wishes</span>
+        <span>💌</span>
+      </button>
+    </section>
+
+    <!-- =============================================================
+         CHAPTER 4: 24 BIRTHDAY WISHES
+         ============================================================= -->
+    <section class="chapter-section" id="chapter-3">
+      <div class="badge-tag">💌 Heartfelt Blessings</div>
+      <h2 class="heading-script" style="font-size: clamp(1.9rem, 5vw, 3rem);">
+        24 Birthday Wishes 🌟
+      </h2>
+      <p class="subtext">
+        24 warm, sincere blessings collected to accompany every step of your new year ahead.
+      </p>
+
+      <div class="wishes-container">
+        <div class="wishes-carousel">
+          <div class="wish-stamp">🌸</div>
+          <div class="wish-counter" id="wish-counter">WISH 1 OF 24</div>
+          <div class="wish-content" id="wish-content">
+            "May Allah bless you with unshakeable peace and a heart that overflows with joy. 🤍"
+          </div>
+          
+          <div class="wishes-controls">
+            <button class="btn-icon" id="prev-wish-btn" title="Previous Wish" aria-label="Previous Wish">‹</button>
+            <button class="btn-icon" id="next-wish-btn" title="Next Wish" aria-label="Next Wish">›</button>
+          </div>
+
+          <div class="wishes-grid-preview" id="wishes-dots"></div>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="wishes-next-chapter-btn">
+        <span>Step into the Dua Garden</span>
+        <span>🌻</span>
+      </button>
+    </section>
+
+    <!-- =============================================================
+         CHAPTER 5: DUA & PRAYER GARDEN
+         ============================================================= -->
+    <section class="chapter-section" id="chapter-4">
+      <div class="badge-tag">🌙 Garden of Peace</div>
+      <h2 class="heading-script" style="font-size: clamp(1.9rem, 5vw, 3rem);">
+        The Dua & Prayer Garden 🌻
+      </h2>
+      <p class="subtext">
+        A tranquil corner dedicated to sincere prayers for your well-being, peace, and eternal barakah.
+      </p>
+
+      <div class="garden-card-container">
+        <!-- Dua 1 -->
+        <div class="dua-card">
+          <span class="dua-icon">🤲</span>
+          <h3 class="dua-title">Dua for Health, Barakah & Happiness</h3>
+          <p class="dua-text">
+            May Allah SWT bless you with vibrant health, deep inner peace, unshakeable happiness, barakah in every single breath, and open every door of beautiful halal opportunities before her. Ameen.
+          </p>
+        </div>
+
+        <!-- Dua 2 -->
+        <div class="dua-card">
+          <span class="dua-icon">🌙</span>
+          <h3 class="dua-title">Dua for Protection & Serenity</h3>
+          <p class="dua-text">
+            May He protect you from every hidden sorrow, ease any burden resting on your shoulders, accept your silent prayers, guide your steps towards what is best, and grant you goodness in this life and the hereafter.
+          </p>
+        </div>
+
+        <!-- Dua 3 -->
+        <div class="dua-card">
+          <span class="dua-icon">🌷</span>
+          <h3 class="dua-title">Dua for our Pyare Insan</h3>
+          <p class="dua-text">
+            May your heart always stay radiant, your smile never fade, and your life be overflowing with countless moments that make your heart softly whisper <em>Alhamdulillah</em>.
+          </p>
+        </div>
+
+        <!-- Dua 4 -->
+        <div class="dua-card">
+          <span class="dua-icon">🤍</span>
+          <h3 class="dua-title">Dua for Sincere Love & Ease</h3>
+          <p class="dua-text">
+            May you always be surrounded by genuine souls who cherish you for who you are, find ease whenever life feels overwhelming, and always feel deeply safe and loved.
+          </p>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="garden-next-btn">
+        <span>Open A Little Gift Box</span>
+        <span>🎁</span>
+      </button>
+    </section>
+
+    <!-- =============================================================
+         CHAPTER 6: A BOX OF COMPLIMENTS
+         ============================================================= -->
+    <section class="chapter-section" id="chapter-5">
+      <div class="badge-tag">🎁 Sweet Reminders</div>
+      <h2 class="heading-script" style="font-size: clamp(1.9rem, 5vw, 3rem);">
+        A Box of Sweet Compliments 🎀
+      </h2>
+      <p class="subtext">
+        Just in case nobody reminded you today how truly special, capable, and gentle you are... ♡
+      </p>
+
+      <!-- Interactive 3D Gift Box -->
+      <div class="box-wrapper" id="gift-box-stage" title="Tap the gift box to draw a compliment!">
+        <svg class="gift-box-svg" viewBox="0 0 200 180">
+          <!-- Box body -->
+          <rect x="35" y="70" width="130" height="95" rx="14" fill="#FFB5C8" stroke="#FF8FAB" stroke-width="2"/>
+          <!-- Ribbon Vertical -->
+          <rect x="90" y="70" width="20" height="95" fill="#FF8FAB"/>
+          <!-- Lid -->
+          <rect x="25" y="52" width="150" height="26" rx="8" fill="#FF8FAB" stroke="#E75480" stroke-width="1.5"/>
+          <rect x="90" y="52" width="20" height="26" fill="#FFB5C8"/>
+          <!-- Bow Top -->
+          <ellipse cx="80" cy="42" rx="18" ry="12" fill="#FF6B8B" transform="rotate(-20, 80, 42)"/>
+          <ellipse cx="120" cy="42" rx="18" ry="12" fill="#FF6B8B" transform="rotate(20, 120, 42)"/>
+          <circle cx="100" cy="44" r="7" fill="#E75480"/>
+        </svg>
+
+        <div class="cake-instructions" style="margin-top: 10px;">
+          <span>✨ Tap box to pull a compliment, Mohtarma!</span>
+        </div>
+      </div>
+
+      <!-- Compliment Card Display -->
+      <div class="compliment-display">
+        <p class="compliment-text" id="compliment-text">
+          "The world is genuinely a warmer and kinder place because you are in it, Sanu jii. 🌷"
+        </p>
+        <button class="btn-secondary compliment-action-btn" id="next-compliment-btn">
+          <span>Give Me Another Reminder</span>
+          <span>🎀</span>
+        </button>
+      </div>
+
+      <button class="btn-primary" id="compliment-next-btn">
+        <span>Read Your Keepsake Letter</span>
+        <span>🌙</span>
+      </button>
+    </section>
+
+    <!-- =============================================================
+         CHAPTER 7: GRAND FINALE KEEPSAKE LETTER
+         ============================================================= -->
+    <section class="chapter-section" id="chapter-6">
+      <div class="badge-tag">🌙 Always & Forever</div>
+      
+      <div class="keepsake-card">
+        <div class="keepsake-seal">🤍</div>
+        
+        <h2 class="keepsake-title">
+          Dearest Saniaa 🎀
+        </h2>
+
+        <div class="keepsake-body">
+          <p>
+            Happy Birthday, once again! I truly hope today brings you gentle smiles, warm moments, and a heart that feels completely at ease.
+          </p>
+          <p>
+            You are someone who carries genuine goodness, sincerity, and warmth. you will always remain the most pyare insan. Never doubt the immense value you bring to the lives of those around you.
+          </p>
+          <p>
+            As you embark on this brand new chapter of your journey, I pray that Allah SWT showers your path with barakah, eases every step you take, blesses you with abundant health, and fulfills the beautiful dreams you hold in your heart.
+          </p>
+          <p>
+            May you always keep that soft glow in your eyes, laugh until your cheeks hurt, and collect memories sweeter than you ever dreamed.
+          </p>
+          
+          <div class="keepsake-sign">
+            With heartfelt duas & warmest wishes,<br/>
+            <span>Someone Who Cares ♡</span>
+          </div>
+        </div>
+
+        <div class="keepsake-actions">
+          <button class="btn-secondary" id="copy-letter-btn">
+            <span>Copy Keepsake Letter</span>
+            <span>💌</span>
+          </button>
+          <button class="btn-primary" id="celebration-burst-btn">
+            <span>Rain Confetti!</span>
+            <span>🎉</span>
+          </button>
+          <button class="btn-secondary" id="replay-journey-btn">
+            <span>Replay From Beginning</span>
+            <span>🎀</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================================
+       FLOATING BOTTOM CHAPTER NAVIGATION (7 CHAPTERS)
+       ============================================================= -->
+  <nav class="bottom-nav" aria-label="Chapter Navigation">
+    <button class="nav-item active" data-ch="0" title="Invitation for Saniaa" aria-label="Invitation">🎀</button>
+    <button class="nav-item" data-ch="1" title="Birthday Cake Celebration" aria-label="Birthday Cake">🎂</button>
+    <button class="nav-item" data-ch="2" title="Little Reminders" aria-label="Reminders">🌷</button>
+    <button class="nav-item" data-ch="3" title="24 Birthday Wishes" aria-label="24 Wishes">💌</button>
+    <button class="nav-item" data-ch="4" title="Dua & Prayer Garden" aria-label="Dua Garden">🌻</button>
+    <button class="nav-item" data-ch="5" title="Compliment Box" aria-label="Compliments">🎁</button>
+    <button class="nav-item" data-ch="6" title="Keepsake Letter" aria-label="Keepsake">🌙</button>
+  </nav>
+
+  <!-- Script -->
+  <script src="./script.js"></script>
+</body>
+</html>
